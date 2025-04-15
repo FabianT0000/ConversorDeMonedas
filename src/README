@@ -1,0 +1,9 @@
+RETO:CONVERSOR DE MONEDAS
+
+Realicé el reto conforme se indica en el tablero de trello, pero lo hice de dos formas, por esto se encuentra un Main y un Main2:
+Main: Aquí realice una consulta a la API, cada vez que se elige una de las opciones de conversión, usando la URL:
+https://v6.exchangerate-api.com/v6/1da9eec9a665ea440403cdf6/pair/USD/COP  (En este caso la consulta regresa el valor que equivale 1COP a USD).
+Aunque no me pareció tan eficiente, ya que llegara un momento en donde cada consulta me podrá valer un precio.
+Main2: Aquí realice una sola consulta a la API, tomando como base el dólar estadounidense,
+https://v6.exchangerate-api.com/v6/1da9eec9a665ea440403cdf6/latest/USD
+Y con la ayuda de la librería GSon lo convertí en un objeto y cree una variable que contiene un MAP<String,Double> y con este map ya puedo filtrar cada moneda usando el método get().
